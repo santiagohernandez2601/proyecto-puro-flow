@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ========== ENCABEZADO / NAVEGACIÓN ========== */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #c9a227;
+}
+
+/* ========== HERO / BANNER PRINCIPAL ========== */
+.hero {
+    height: 420px;
+    background: #111;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Degradado oscuro sobre el banner */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.35) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+/* ========== CONTENEDOR GENERAL ========== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== SECCIÓN QUIÉNES SOMOS ========== */
+.about {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about p {
+    margin-bottom: 18px;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ddd;
+}
+
+/* ========== SECCIONES DE PRODUCTOS ========== */
+.section {
+    padding: 50px 0;
+    background: #2a2a2a;
+}
+
+.section:nth-of-type(even) {
+    background: #222;
+}
+
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Cuadrícula de 3 columnas */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tarjeta de cada producto */
+.product-card {
+    background: #1a1a1a;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Contenedor de la imagen del producto */
+.product-img {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.05);
+}
+
+/* Información del producto */
+.product-info {
+    padding: 18px 15px 22px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Precio en color dorado */
+.price {
+    font-size: 18px;
+    color: #c9a227;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Botón "Ver más" */
+.btn-price {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #c9a227;
+    color: #c9a227;
+    padding: 8px 22px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
